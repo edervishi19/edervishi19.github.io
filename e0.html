@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>Click Sports Center</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/fontAwesome.css">
+        <link rel="stylesheet" href="css/hero-slider.css">
+        <link rel="stylesheet" href="css/owl-carousel.css">
+        <link rel="stylesheet" href="css/datepicker.css">
+        <link rel="stylesheet" href="css/tooplate-style.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    
+</head>
+
+<link rel='shortcut icon' href='https://miro.medium.com/max/1280/1*_teLMh-ZHsA-Oi8jN8mLvA.jpeg' />
+<body style="background-color:#b3ffb3; postion-left:200px;">
+<section>
+  <div class="wrapper" style="position:static;">
+    <nav>
+      <input type="checkbox" id="show-search">
+      <input type="checkbox" id="show-menu">
+      <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+      <div class="content">
+      <div class="logo"><a href="#">CLICKSPORTS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></div>
+        <ul class="links">
+          
+          <li style="color:red;">
+           <h3>Sport Options&#9917;&#127923;&#127936;&#127940;&#x2935;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h3></li>
+
+		  <li><a href="#">Home&#10548;</a></li>
+        </ul>
+      </div>
+      <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+      <form action="#" class="search-box">
+        <input type="text" placeholder="Type Something to Search..." required>
+        <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+      </form>
+    </nav>
+	<img style="margin: 50px;" class="circular1" src="https://miro.medium.com/max/1280/1*_teLMh-ZHsA-Oi8jN8mLvA.jpeg">
+  <style>
+  .circular {
+ position-bottom: 450px;
+ left:30px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    -webkit-border-radius: 250px;
+    -moz-border-radius: 250px;
+    background: url(http://link-to-your/image.jpg) no-repeat;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    }
+  .circular1 { 
+ position: fixed; bottom: 430px; right: -50px;
+    width: 77px;
+    border-radius: 15%;
+    -webkit-border-radius: 270px;
+    -moz-border-radius: 270px;
+    background: url(http://link-to-your/image.jpg) no-repeat;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    }
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+.wrapper{
+  background: #171c24;
+  position: fixed;
+  width: 100%;
+}
+.wrapper nav{
+  position: relative;
+  display: flex;
+  max-width: calc(100% - 200px);
+  margin: 0 auto;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .content{
+  display: flex;
+  align-items: center;
+}
+nav .content .links{
+  margin-left: 80px;
+  display: flex;
+}
+.content .logo a{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+}
+.content .links li{
+  list-style: none;
+  line-height: 70px;
+}
+.content .links li a,
+.content .links li label{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 9px 17px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.content .links li label{
+  display: none;
+}
+.content .links li a:hover,
+.content .links li label:hover{
+  background: #323c4e;
+}
+.wrapper .search-icon,
+.wrapper .menu-icon{
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  line-height: 70px;
+  width: 70px;
+  text-align: center;
+}
+.wrapper .menu-icon{
+  display: none;
+}
+.wrapper #show-search:checked ~ .search-icon i::before{
+  content: "\f00d";
+}
+.wrapper .search-box{
+  position: absolute;
+  height: 100%;
+  max-width: calc(100% - 50px);
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.wrapper #show-search:checked ~ .search-box{
+  opacity: 1;
+  pointer-events: auto;
+}
+.search-box input{
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  color: #fff;
+  background: #171c24;
+  padding: 0 100px 0 15px;
+}
+.search-box input::placeholder{
+  color: #f2f2f2;
+}
+.search-box .go-icon{
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 60px;
+  width: 70px;
+  background: #171c24;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+.wrapper input[type="checkbox"]{
+  display: none;
+}
+/* Dropdown Menu code start */
+.content .links ul{
+  position: absolute;
+  background: #171c24;
+  top: 80px;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+}
+.content .links li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+}
+.content .links ul li a{
+  display: block;
+  width: 100%;
+  line-height: 30px;
+  border-radius: 0px!important;
+}
+.content .links ul ul{
+  position: absolute;
+  top: 0;
+  right: calc(-100% + 8px);
+}
+.content .links ul li{
+  position: relative;
+}
+.content .links ul li:hover ul{
+  top: 0;
+}
+/* Responsive code start */
+@media screen and (max-width: 1250px){
+  .wrapper nav{
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  nav .content .links{
+    margin-left: 30px;
+  }
+  .content .links li a{
+    padding: 8px 13px;
+  }
+  .wrapper .search-box{
+    max-width: calc(100% - 100px);
+  }
+  .wrapper .search-box input{
+    padding: 0 100px 0 15px;
+  }
+}
+@media screen and (max-width: 900px){
+  .wrapper .menu-icon{
+    display: block;
+  }
+  .wrapper #show-menu:checked ~ .menu-icon i::before{
+    content: "\f00d";
+  }
+  nav .content .links{
+    display: block;
+    position: fixed;
+    background: #14181f;
+    height: 100%;
+    width: 100%;
+    top: 70px;
+    left: -100%;
+    margin-left: 0;
+    max-width: 350px;
+    overflow-y: auto;
+    padding-bottom: 100px;
+    transition: all 0.3s ease;
+  }
+  nav #show-menu:checked ~ .content .links{
+    left: 0%;
+  }
+  .content .links li{
+    margin: 15px 20px;
+  }
+  .content .links li a,
+  .content .links li label{
+    line-height: 40px;
+    font-size: 20px;
+    display: block;
+    padding: 8px 18px;
+    cursor: pointer;
+  }
+  .content .links li a.desktop-link{
+    display: none;
+  }
+  /* dropdown responsive code start */
+  .content .links ul,
+  .content .links ul ul{
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    background: none;
+    max-height: 0px;
+    overflow: hidden;
+  }
+  .content .links #show-features:checked ~ ul,
+  .content .links #show-services:checked ~ ul,
+  .content .links #show-items:checked ~ ul{
+    max-height: 300vh;
+  }
+  .content .links ul li{
+    margin: 7px 20px;
+  }
+  .content .links ul li a{
+    font-size: 18px;
+    line-height: 30px;
+    border-radius: 5px!important;
+  }
+}
+@media screen and (max-width: 400px){
+  .wrapper nav{
+    padding: 0 10px;
+  }
+  .content .logo a{
+    font-size: 27px;
+  }
+  .wrapper .search-box{
+    max-width: calc(100% - 70px);
+  }
+  .wrapper .search-box .go-icon{
+    width: 30px;
+    right: 0;
+  }
+  .wrapper .search-box input{
+    padding-right: 30px;
+  }
+}
+.dummy-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  z-index: -1;
+  padding: 0 20px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.dummy-text h2{
+  font-size: 45px;
+  margin: 5px 0;
+}
+.container
+  display: flex
+  flex-wrap: wrap
+  align-items: flex-end
+  
+.item
+  background: #ddd
+  height: 190px
+  width: 190px
+
+	</style>
+	</div>  
+
+      
+
+
+
+    
+    <section class="banner" id="top">
+        <div class="container">
+            
+    
+    <div class="tabs-content" id="recommended-hotel" style="background-color:#b3ffb3;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sport categories of our platform</h2>
+                    </div>
+                </div>
+                <div class="wrapper" style="position:static;">
+                    <div class="col-md-4">
+                            <ul class="tabs clearfix" data-tabgroup="third-tab-group">
+                                <li><a href="#livingroom" class="active">Football <i class="fa fa-angle-right"></i></a></li>
+                                <li><a href="#suite1">BasketBall <i class="fa fa-angle-right"></i></a></li>
+                                <li><a href="#swimingpool">Voleyball <i class="fa fa-angle-right"></i></a></li>
+                                <li><a href="#massage">Tennis<i class="fa fa-angle-right"></i></a></li>
+                                <li><a href="#fitness">Pingpong<i class="fa fa-angle-right"></i></a></li>
+                                <li><a href="#event">Horse Riding<i class="fa fa-angle-right"></i></a></li>
+								<li><a href="#golf">Golf<i class="fa fa-angle-right"></i></a></li>
+								<li><a href="#swim">Swimming<i class="fa fa-angle-right"></i></a></li>
+							    <li><a href="#bicyclying">Bicycling<i class="fa fa-angle-right"></i></a></li>
+								<li><a href="#karate">Karate<i class="fa fa-angle-right"></i></a></li>
+								<li><a href="#boxing">Boxing<i class="fa fa-angle-right"></i></a></li>
+								<li><a href="#kickboxing">Kickboxing<i class="fa fa-angle-right"></i></a></li>
+								<li><a href="#fitnesss">Fitness<i class="fa fa-angle-right"></i></a></li>
+								<li><a href="#weightlifting">Weightlifting<i class="fa fa-angle-right"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <section id="third-tab-group" class="recommendedgroup">
+                            <div id="livingroom">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div id="owl-suiteroom" class="owl-carousel owl-theme">
+                                            <div class="item">
+                                                <div class="suiteroom-item">
+                                                    <iframe width="791" height="545" src="https://www.youtube.com/embed/4SCMxJ8yn9M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                
+                                                    <div class="text-content">
+                                                        <h4>Ndeshja e kombetares</h4>
+                                                        <span>Tirane,Albania</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="suiteroom-item">
+                                                    <img width="791" height="545" src="https://fshf.org/wp-content/uploads/2022/08/433F5BF4-747C-43D6-8827-FA9E26F81727.jpeg" alt="">
+                                                    <div class="text-content">
+                                                        <h4>Akademia e FSHF</h4>
+                                                        <span>Tirane,Albania</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="suiteroom-item">
+                                                    <img width="791" height="545" src="https://www.supersport.al/wp-content/uploads/2019/09/Akademia-Europiane-e-Futbollit.jpeg" alt="">
+                                                    <div class="text-content">
+                                                        <h4>Akademia EU e Futbollit</h4>
+                                                        <span>Tirane,Albania</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+											<div class="item">
+                                                <div class="suiteroom-item">
+                                                    <img width="791" height="545" src="https://top-channel.tv/wp-content/uploads/2022/06/komb.jpg" alt="">
+                                                    <div class="text-content">
+                                                        <h4>Akademia e Kombinatit</h4>
+                                                        <span>Tirane,Albania</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+								
+											<div class="item">
+                                                <div class="suiteroom-item">
+                                                    <img width="791" height="545" src="https://pbs.twimg.com/media/D7C5teVWwAEd7-g.jpg" alt="">
+                                                    <div class="text-content">
+                                                        <h4>Akademia "Spartaku"</h4>
+                                                        <span>Tirane,Albania</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+											
+											<div class="item">
+                                                <div class="suiteroom-item">
+                                                    <img width="791" height="545" src="https://acp.al/wp-content/uploads/2014/03/Kompleksi-sportiv-Sport-Planet-02.jpg" alt="">
+                                                    <div class="text-content">
+                                                        <h4>Kompleksi "Sport Planet"</h4>
+                                                        <span>Korce,Albania</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+											<div class="item">
+                                                <div class="suiteroom-item">
+                                                    <img width="791" height="545" src="https://www.gazetaexpress.com/wp-content/uploads/2022/04/1200-630-17a00661f7fbe14d996299cba49e875c-1000x525.jpg" alt="">
+                                                    <div class="text-content">
+                                                        <h4>Qendra "Dinamo"</h4>
+                                                        <span>Tirane,Albania</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+											<div class="item">
+                                                <div class="suiteroom-item">
+                                                    <img width="791" height="545" src="https://veriusport.al/wp-content/uploads/2021/10/Futboll-5x5-1.jpg" alt="">
+                                                    <div class="text-content">
+                                                        <h4>Qendra "Veriu Sport"</h4>
+                                                        <span>Tirane,Albania</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+											<div class="item">
+                                                <div class="suiteroom-item">
+                                                    <img width="791" height="545" src="https://www.balkanweb.com/wp-content/uploads/2017/02/99003778_mcfc_236292c.jpg" alt="">
+                                                    <div class="text-content">
+                                                        <h4>Qendra Sportive "Tirona"</h4>
+                                                        <span>Tirane,Albania</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+											<div class="item">
+                                                <div class="suiteroom-item">
+                                                    <img width="791" height="545" src="http://presheva.com/portal/wp-content/uploads/2017/02/IMG_0455.jpg" alt="">
+                                                    <div class="text-content">
+                                                        <h4>Akademia e futbollit "OKF"</h4>
+                                                        <span>Tirane,Albania</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+											<div class="item">
+                                                <div class="suiteroom-item">
+                                                    <img width="791" height="545" src="https://www.myticket.al/multimedia/spaces/loku.jpg" alt="">
+                                                    <div class="text-content">
+                                                        <h4>Qendra Sportive e Brrylit</h4>
+                                                        <span>Tirane,Albania</span>
+                                                    </div>
+                                                </div>
+												</div>
+                                                </div>
+												   </div>
+                                                </div>
+												   </div>
+                            <div id="suite1">
+                                <img src="https://www.fiba.basketball/api/img/team/coverimage/5/208009/9/980/462" alt="">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="text-content">
+                                            <h4>Albanian Basketball Academy</h4>
+                                            <span>Tirane,Albania</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+									
+                            
+                            <div id="swimingpool">
+                                <img src="https://konica.al/wp-content/uploads/2019/12/partizani-femra-volej-1024x580.jpg" alt="">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="text-content">
+                                            <h4>Albanian Voleyball Academy</h4>
+                                            <span>Tirane,Albania</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="massage">
+                                <img src="https://tennisalbania.al/wp-content/uploads/2021/03/tennis_albania_06.jpg" alt="">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="text-content">
+                                            <h4>Albanian Tennis Academy</h4>
+                                            <span>Tirane,Albania</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="fitness">
+                                <img src="https://www.ettu.org/images/redaktion/News/2019/12_December/pristina_8d26a_f_666x375.jpg" alt="">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="text-content">
+                                            <h4>Albanian Pingpong Team</h4>
+                                            <span>Tirane,Albania</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="event">
+                                <img src="https://www.unicorntrails.com/files/galleries/ride717_14434" alt="">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="text-content">
+                                            <h4>Horse Riding Albania Academy</h4>
+                                            <span>Tirane,Albania</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+							<div id="golf">
+                                <img src="https://assets.isu.pub/document-structure/210226122858-31a1aed1a2a072d48cdb061a741dcace/v1/2005896985aeaa25dde17667845adf3e.jpg" alt="">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="text-content">
+                                            <h4>Golf Albania Federate</h4>
+                                            <span>Durres,Albania</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+							<div id="swim">
+                                <img src="https://testela.al/wp-content/uploads/2020/09/2020_09_16-sport_center-gallery-05.jpg" alt="">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="text-content">
+                                            <h4>Te Stela Sport Center</h4>
+                                            <span>Tirane,Albania</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+							<div id="bicyclying">
+                                <img src="http://rtv21.tv/wp-content/uploads/2022/05/nn.png" alt="">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="text-content">
+                                            <h4>Akademia e ciklizmit</h4>
+                                            <span>Tirane,Albania</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+							<div id="karate">
+                                <img src="https://res.cloudinary.com/duu3v9gfg/image/fetch/t_fit_1920/https://78884ca60822a34fb0e6-082b8fd5551e97bc65e327988b444396.ssl.cf3.rackcdn.com/up/2018/02/albania-01-1519810691-1519810691.jpg" alt="">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="text-content">
+                                            <h4>Akademia e Karatese ne Shqiperi</h4>
+                                            <span>Tirane,Albania</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+							<div id="boxing">
+                                <img src="https://news7f.com/wp-content/uploads/2022/08/Florian-Marku-780x470.jpg" alt="">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="text-content">
+                                            <h4>Boxing Albania</h4>
+                                            <span>Tirane,Albania</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+							<div id="kickboxing">
+                                <img src="https://nocalbania.org.al/wp-content/uploads/2020/12/kikboxing-Coco-Championship-scaled.jpg" alt="">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="text-content">
+                                            <h4>Kickbox Albania Center</h4>
+                                            <span>Tirane,Albania</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+							<div id="fitnesss">
+                                <img src="https://www.ocregister.com/wp-content/uploads/migration/n4w/n4wq53-11.s.lngym.0427.pb.jpg?w=620" alt="">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="text-content">
+                                            <h4>Fitness Albania Academy</h4>
+                                            <span>Tirane,Albania</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+							<div id="weightlifting">
+                                <img src="https://www.supersport.al/wp-content/uploads/2022/05/qerimaj.jpg" alt="">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="text-content">
+                                            <h4>Akademia Peshengritjes</h4>
+                                            <span>Tirane,Albania</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+							
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section id="most-visited">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+            <h2>Most frequented sport centers for this week &nbsp;<i>[Sponsored]</i></h2>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div id="owl-mostvisited" class="owl-carousel owl-theme">
+                        <div class="item col-md-12">
+                            <div class="visited-item">
+                                <img src="http://www.paragonstructures.com/wp-content/uploads/2018/11/SE041-A-03-A4-1.jpg" alt="" width="600" height="200">
+                                <div class="text-content">
+                                    <h4>Paragon Center</h4>
+                                    <span>Football</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item col-md-12">
+                            <div class="visited-item">
+                                <img src="https://smumustangs.com/images/2020/11/5/LR1.jpg" alt="" width="600" height="200">
+                                <div class="text-content">
+                                    <h4>Partizani Center</h4>
+                                    <span>Basketball</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item col-md-12">
+                            <div class="visited-item">
+                                <img src="https://images.squarespace-cdn.com/content/v1/61d3526f6422bc45673e3e6a/62a77145-2bf6-494f-9066-d3692ab1641a/258235635_263768878942358_2644017002089787746_n.jpg?format=2500w" alt="" width="600" height="200">
+                                <div class="text-content">
+                                    <h4>Rozafa Center</h4>
+                                    <span>Voleyball</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item col-md-12">
+                            <div class="visited-item">
+                                <img src="https://ettcblog.files.wordpress.com/2015/04/stb_0171.jpg" alt="" width="600" height="200">
+                                <div class="text-content">
+                                    <h4>Teuta Center</h4>
+                                    <span>Voleyball</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item col-md-12">
+                            <div class="visited-item">
+                                <img src="https://media.bizj.us/view/img/11980801/parking-lot-nets-car-display*1200xx1915-1080-0-0.jpg" alt="" width="600" height="200">
+                                <div class="text-content">
+                                    <h4>Skenderbeu Center</h4>
+                                    <span>Tennis</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item col-md-12">
+                            <div class="visited-item">
+                                <img src="https://igp.brightspotcdn.com/dims4/default/156fb58/2147483647/strip/true/crop/1651x1237+274+0/resize/610x457!/quality/90/?url=http%3A%2F%2Findigogolf-brightspot.s3.amazonaws.com%2Fclubs%2F6b%2F90%2Fac06e8b648cbb74836c1fc645f7b%2Fthe-ridge-golf-course-16.9-1.jpg" alt="" width="600" height="200">
+                                <div class="text-content">
+                                    <h4>Dajti Center</h4>
+                                    <span>Golf</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item col-md-12">
+                            <div class="visited-item">
+                                <img src="https://media.kidadl.com/60349f786499d3740f04f53d_90_best_horse_riding_quotes_sayings_and_phrases_47825e884f.jpeg" alt="" width="600" height="200">
+                                <div class="text-content">
+                                    <h4>Qendra e kuajve</h4>
+                                    <span>Horse Riding</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item col-md-12">
+                            <div class="visited-item">
+                                <img src="https://pbs.twimg.com/media/DqGjGptWwAA_rvC.jpg" alt="" width="600" height="200">
+                                <div class="text-content">
+                                    <h4>Aqua Pools</h4>
+                                    <span>Swimming</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item col-md-12">
+                            <div class="visited-item">
+                                <img src="https://www.wkf.net/imagenes/noticias/destacado-noticia20220423233046.jpg" alt="" width="600" height="200">
+                                <div class="text-content">
+                                    <h4>Qendra kombetare e karatese</h4>
+                                    <span>Karate</span>
+                                </div>
+                            </div>
+                        </div>
+						<div class="item col-md-12">
+                            <div class="visited-item">
+                                <img src="http://iaba.ie/site3/wp-content/uploads/2022/04/ring-1024x542.jpg" alt="" width="600" height="200">
+                                <div class="text-content">
+                                    <h4>EUBC Albania Center</h4>
+                                    <span>Boxing</span>
+                                </div>
+                            </div>
+                        </div>
+						<div class="item col-md-12">
+                            <div class="visited-item">
+                                <img src="https://i.pinimg.com/originals/08/cc/a4/08cca4b307f675344fc267f73f05079d.jpg" alt="" width="600" height="200">
+                                <div class="text-content">
+                                    <h4>Qendra kombetare e peshengritjes</h4>
+                                    <span>Weightlifting</span>
+                                </div>
+                            </div>
+                        </div>
+						<div class="item col-md-12">
+                            <div class="visited-item">
+                                <img src="https://pr1.nicelocal.co.uk/v6pqnpeIYau1m0sk6aBbyg/1120x700,q85/4px-BW84_n0QJGVPszge3NRBsKw-2VcOifrJIjPYFYkOtaCZxxXQ2eMxspSUQ-XBYdX6N7jrJdn331vLDGz4YATEJ-0EYijqn16qcv-zT1wwH8bUI3xIvg" alt="" width="600" height="200">
+                                <div class="text-content">
+                                    <h4>UFC Gym</h4>
+                                    <span>Fitness</span>
+                                </div>
+                            </div>
+                        </div>
+						<div class="item col-md-12">
+                            <div class="visited-item">
+                                <img src="https://www.theadvocate.com.au/images/transform/v1/crop/frm/PQzTv8MmTEzAnZdTR6nAtj/bce2903a-6cc7-4a97-8fec-c3983024907c.jpg/r0_0_4032_3024_w1200_h678_fmax.jpg" alt="" width="600" height="200">
+                                <div class="text-content">
+                                    <h4>CheckieChen Albania</h4>
+                                    <span>Judo</span>
+                                </div>
+                            </div>
+                        </div>
+						
+                        <div class="item col-md-12">
+                            <div class="visited-item">
+                                <img src="https://24hsport.vn/webroot/img/images/kickboxing-1577702953.jpg" alt="" width="600" height="200">
+                                <div class="text-content">
+                                    <h4>Tirona Kickboxing center</h4>
+                                    <span>Kickboxing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="primary-button">
+                        <a href="#" class="scroll-top">Back To Top</a>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <ul class="social-icons">
+                    <h3>QUICK LINKS</h3>
+                     <ul class="link_menu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="about.html"> About</a></li>
+                        <li><a href="classes.html">Centers</a></li>
+                        <li><a href="yoga.html">Sports</a></li>
+                        <li><a href="pricing.html">Help</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                     </ul>
+                </div>
+                <div class="col-md-12">
+                    <p>Copyright by <em>ClickSports</em></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+    
+    <script src="js/datepicker.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+        
+
+        // navigation click actions 
+        $('.scroll-link').on('click', function(event){
+            event.preventDefault();
+            var sectionID = $(this).attr("data-id");
+            scrollToID('#' + sectionID, 750);
+        });
+        // scroll to top action
+        $('.scroll-top').on('click', function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop:0}, 'slow');         
+        });
+        // mobile nav toggle
+        $('#nav-toggle').on('click', function (event) {
+            event.preventDefault();
+            $('#main-nav').toggleClass("open");
+        });
+    });
+    // scroll function
+    function scrollToID(id, speed){
+        var offSet = 0;
+        var targetOffset = $(id).offset().top - offSet;
+        var mainNav = $('#main-nav');
+        $('html,body').animate({scrollTop:targetOffset}, speed);
+        if (mainNav.hasClass("open")) {
+            mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+            mainNav.removeClass("open");
+        }
+    }
+    if (typeof console === "undefined") {
+        console = {
+            log: function() { }
+        };
+    }
+    </script>
+</body>
+</html>
